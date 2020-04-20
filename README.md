@@ -7,3 +7,8 @@ Below are the steps for running this application
   - Run the container: $ docker run -d -p 80:80 calc_app
  
 You can access the swagger UI at http://localhost/swagger/
+
+
+# References
+https://medium.com/@yvescallaert/docker-intro-building-a-python-3-image-62031d0b7e39
+https://runnable.com/docker/python/dockerize-your-flask-application
