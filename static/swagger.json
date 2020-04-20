@@ -1,0 +1,65 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "description": "Calculator APIs",
+        "version": "1.0.0",
+        "title": "AshishWebService",
+        "contact": {
+            "email": "ashishsingh2k8@gmail.com"
+        }
+    },
+    "tags": [
+        {
+            "name": "MyCalculator",
+            "description": "APIs for arithemetic expression evaluation"
+        }
+    ],
+    "paths": {
+        "/v1/calculate": {
+                      "get": {
+                "tags": [
+                    "App Center"
+                ],
+                "summary": "Get Status of AppCenter Apps Installation Operation",
+                "parameters": [
+                    {
+                        "name": "expression",
+                        "in": "query",
+                        "required": true,
+                        "description": "Arithemetic expresion to evaluate",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully calculated the result",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+}
+}
+
