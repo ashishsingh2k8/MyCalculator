@@ -3,6 +3,9 @@ This repo describes a simple calculator developed with python flask(served with 
 Below are the steps for running this application
 
   - $ git clone https://github.com/ashishsingh2k8/MyCalculator.git/
+  - Install nosetests to run UTs: $ pip install nosetests
+  - $ cd MyCalculator
+  - Run UTs: $ nosetests -sv test/
   - Build the container image locally: $ docker build -t calc_app -f Dockerfile . --no-cache 
   - Run the container: $ docker run -d -p 80:80 calc_app
  
