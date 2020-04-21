@@ -1,3 +1,4 @@
+from api.myCalculator_V1 import mycalc_blueprint_v1
 import json
 import sys
 import unittest
@@ -8,10 +9,10 @@ from mock import patch
 
 sys.path.append(rootpath.detect())
 
-from api.myCalculator_V1 import mycalc_blueprint_v1
 
 app = Flask(__name__)
 app.register_blueprint(mycalc_blueprint_v1, url_prefix='')
+
 
 class TestMyCalculatorV1(unittest.TestCase):
 
