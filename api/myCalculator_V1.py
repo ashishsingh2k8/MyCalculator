@@ -8,9 +8,12 @@ calulator = SimpleCalculator()
 
 
 @mycalc_blueprint_v1.route('/v1/calculate', methods=['GET'])
-def login():
+def calculate():
     # TODO: Validate headers(authtoken) if present
     try:
+        # Actually expression not found is also type of Bad parameters
+        # Here have caught it with 404 Just for demostration.
+        # Should change 404 not found to 400 Bad request.
         if "expression" not in request.args:
             response = jsonify({"result": "No expression found"})
             response.status_code = 404
